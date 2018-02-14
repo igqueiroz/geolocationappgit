@@ -32,16 +32,17 @@ export default class DataApi {
                 }
             })
       }
+
     }
-    // Lista os dados recebidos e guardados na API do servidor Express
-    static list(list){
+    // Lista os dados recebidos e guardados na API do banco MongoDB
+    static list(listUrl){
       return dispatch => {  
         const requestInfo = {
           method: 'GET',
           mode: 'cors'
         };
         //recebe os dados consumíveis da API criada, o servidor já está no modo Cross-Origin
-        fetch(list, requestInfo)
+        fetch(listUrl, requestInfo)
             .then(response => {
                 if(response.ok) {
                     return response.json()
@@ -52,8 +53,11 @@ export default class DataApi {
             })
             .then(list => {
               //envia a requisição para o reducer do Redux e realiza a ação desejada
-              dispatch({type:'LISTDATA',list});
-              return list;
+              // list.users => primeira chave do JSON en http://localhost:3001/userlist
+              const listing = list.users
+              // O "listing" do reducer deve retornar a função manipulada para devolver um Array ao nosso componente
+              dispatch({type:'LISTDATA', listing});
+              return listing;
           }); 
 
       }

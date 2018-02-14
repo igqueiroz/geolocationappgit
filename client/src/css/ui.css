@@ -20,6 +20,9 @@ p *, p {
   font-family: 'Montserrat', sans-serif;
   line-height: 22px; }
 
+th {
+  text-align: center; }
+
 body {
   background: #f3f3f3; }
 

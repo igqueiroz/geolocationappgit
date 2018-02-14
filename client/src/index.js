@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GeoLocation from './components/GeoLocation';
 import Laureate from './components/Laureate';
+import Users from './components/Users';
 import { Top, Oooppsss404} from './components/';
 import Gmap from './components/Gmap';
 import { Router, Route, browserHistory } from 'react-router'; // Cria as rotas
@@ -22,6 +23,7 @@ ReactDOM.render(
           <Route path="/" component={Gmap} />
           <Route path="/geolocation" component={GeoLocation} />
           <Route path="/laureate" component={Laureate} />
+          <Route path="/users" component={Users} />
         </Route>
         <Route path="*" component={Oooppsss404} />
       </Router>

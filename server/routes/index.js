@@ -8,12 +8,12 @@ var assert = require('assert');
 //Cria a API de lista de usuários coletados
 router.get('/userlist', (req, res) => {
     let db = req.db.collection('users');
-    db.find({})
-      .then(users => res.send(users))
-      .catch(error => {
-      	console.error(error);
+    db.find()
+		.then(users => res.send( {users} ))
+		.catch(error => {
+			console.error(error);
 		res.status(404).send('Bad Request');
-     });
+	});
 });
 
 // Permite a interação via POST, recebe os dados da App e envia para o servidor MongoDB
@@ -29,7 +29,6 @@ router.post('/userlist', (req, res) => {
 	const universityLng = req.body.newuniversityLng;
 	
 	// Quando tiver validação de dados no lado do servidor, colocar nesse espaço
-
 	// Insere os dados coletados via POST vindos da App no nosso banco 
 	db.insert({
 		'name': name,

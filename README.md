@@ -44,4 +44,8 @@ A documentação de cada componente registrada diretamente no código
 > localhost:3001 - Back-End
 > localhost:3001/userlist - API Rest
 
+## Extra
+
+> http://localhost:3000/users - Tabela com os dados de todas as interações dos usuários
+
 A interação do usuário vai gerar dados acessados pela API.
