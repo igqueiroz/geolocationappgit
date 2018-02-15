@@ -40,11 +40,11 @@ A documentação de cada componente registrada diretamente no código
 
 ## Locais
 
-> (localhost:3000)[localhost:3001/userlist] - Front-End
+> localhost:3000[localhost:3001/userlist] - Front-End
 
-> (localhost:3001)[localhost:3001/userlist] - Back-End
+> localhost:3001[localhost:3001/userlist] - Back-End
 
-> (localhost:3001/userlist)[localhost:3001/userlist] - API Rest
+> localhost:3001/userlist[localhost:3001/userlist] - API Rest
 
 A interação do usuário vai gerar dados acessados pela API.
 
