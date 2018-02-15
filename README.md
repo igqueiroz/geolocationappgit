@@ -50,5 +50,5 @@ A interação do usuário vai gerar dados acessados pela API.
 
 ## Extra
 
->> http://localhost:3000/users -Tabela com os dados de todas as interações dos usuários
+> http://localhost:3000/users -Tabela com os dados de todas as interações dos usuários
 
