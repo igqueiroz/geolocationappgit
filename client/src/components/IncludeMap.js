@@ -30,7 +30,7 @@ export class IncludeMap extends Component {
         this.onMapClicked = this.onMapClicked.bind(this);
         this.onMapReady = this.onMapReady.bind(this);
         this.searchNearby = this.searchNearby.bind(this);
-        this.saveData = this.saveData.bind(this);
+        // this.saveData = this.saveData.bind(this);
     }
 
    // Retorna as funções imediatamente com o mapa pronto
@@ -53,23 +53,23 @@ export class IncludeMap extends Component {
         }        
         else {
             this.setState({buttonUber: true})
-            this.saveData()
+            // this.saveData()
         }
     }
 
     // Envia os dados coletados a cada clique nos pins das universidades
-    saveData() {
-        this.props.store.dispatch(DataApi.save(
-            this.state.name,
-            this.state.email,
-            this.state.centerLat,
-            this.state.centerLng,
-            this.state.userDevice,
-            this.props.nearByDistance,
-            this.state.currentMarkerLat,
-            this.state.currentMarkerLng
-        ));
-    }
+    // saveData() {
+    //     this.props.store.dispatch(DataApi.save(
+    //         this.state.name,
+    //         this.state.email,
+    //         this.state.centerLat,
+    //         this.state.centerLng,
+    //         this.state.userDevice,
+    //         this.props.nearByDistance,
+    //         this.state.currentMarkerLat,
+    //         this.state.currentMarkerLng
+    //     ));
+    // }
 
     // Remove a janela de Info aberta no momento do clique
     onMapClicked(props) {
@@ -165,7 +165,7 @@ export class IncludeMap extends Component {
       }
     }
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyC8AqZGEDQvRcNCofun-o3YSJXU6V9G9LE",
+    apiKey: "AIzaSyAmFYEUy9Kj2WhpImGyYHMb0t9efz3Vmbk",
     version: '3',
     language: 'portuguese'
 })(IncludeMap)

@@ -8,7 +8,7 @@ export default class Gmap extends Component {
         super(props);
         this.state = {
             myLocation: [],
-            zoom: 5,
+            zoom: 13.5,
             nearByDistance: 0,
             name: '',
             email: '',
@@ -96,13 +96,13 @@ export default class Gmap extends Component {
                              </div>
                             <h4 className="title">Ache universidades próximas num raio de:</h4>
                             <div className="col-xs-4 extras">
-                                <button className="nearbymeters" onClickCapture={(e) => this.updateNearByDistance(e,1000,13)}> 1km </button>
+                                <button className="nearbymeters" onClickCapture={(e) => this.updateNearByDistance(e,1000,14)}> 1km </button>
                             </div>
                             <div className="col-xs-4 extras">
-                                <button className="nearbymeters" onClickCapture={(e) => this.updateNearByDistance(e,2000,11)}> 2km </button>
+                                <button className="nearbymeters" onClickCapture={(e) => this.updateNearByDistance(e,2000,13.5)}> 2km </button>
                             </div>
                             <div className="col-xs-4 extras">
-                                <button className="nearbymeters" onClickCapture={(e) => this.updateNearByDistance(e,3000,10)}> 3km </button>
+                                <button className="nearbymeters" onClickCapture={(e) => this.updateNearByDistance(e,3000,13)}> 3km </button>
                             </div>
                             {this.state.rangeButton && <button className="locate" type="Submit">Eu quero achar universidades!</button>}
                         </form>
